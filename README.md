@@ -30,3 +30,12 @@ For frontend, you need to create `.env` file and put the following content (reme
 ```bash
 REACT_APP_BACKEND_URL=http://localhost:3001
 ```
+
+## Docker Commands
+
+### Build the image
+docker build -t travel-frontend:V1.2 .
+
+### Run the image
+docker run -d -p 3001:3001 --name docker_backend travel-backend:V1.0
+docker run -d -p 3000:3000 --name docker_frontend travel-frontend:V1.2
