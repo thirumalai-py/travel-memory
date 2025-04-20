@@ -1,0 +1,18 @@
+version: '2.0'
+
+services:
+  tmbackend:
+    build: ./backend
+    container_name: tmbackend_compose
+    ports:
+      - '3001:3001'
+
+  tmfrontend:
+    build: ./frontend
+    container_name: tmfrontend_composed
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:3001
+    ports:
+      - '3000:3000'
+    depends_on:
+      - tmbackend

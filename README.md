@@ -39,3 +39,9 @@ docker build -t travel-frontend:V1.2 .
 ### Run the image
 docker run -d -p 3001:3001 --name docker_backend travel-backend:V1.0
 docker run -d -p 3000:3000 --name docker_frontend travel-frontend:V1.2
+
+### Push the repository to Docker hub
+docker tag tm-backend:1.0 thirumalaipy/tmnode:1.0
+
+docker push thirumalaipy/tmnode:1.0
+

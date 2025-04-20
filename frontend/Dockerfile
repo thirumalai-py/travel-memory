@@ -1,5 +1,5 @@
 # Use a specific Node version (e.g., 18 or 20; 22 is quite new and might have compatibility issues)
-FROM node:18
+FROM node:18-alpine
 
 # Set working directory
 WORKDIR /app
